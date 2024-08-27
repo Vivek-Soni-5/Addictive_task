@@ -10,6 +10,10 @@ dotenv.config();
 
 // CORS configuration
 const corsOptions = {
+    origin: (origin, callback) => {
+        // Allow any origin
+        callback(null, true);
+    },
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true // Allow credentials (cookies, HTTP authentication)
