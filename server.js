@@ -10,7 +10,7 @@ dotenv.config();
 
 // CORS configuration
 const corsOptions = {
-    origin: 'http://localhost:3000', // Allow only this origin
+    origin: process.env.FRONTEND_URL, // Allow only this origin
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true // Allow credentials (cookies, HTTP authentication)
